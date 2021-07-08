@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="name"        content="Blokk &bull; {{ page.title }}">
+    <meta name="description" content="Blokk is a sketchware alternative.">
+    <meta name="keywords"    content="blok, blokk, open, block, sketchware">
+    <meta name="theme-color" content="#007b3f">
+
+    <title>Blokk &bull; {{ page.title }}</title>
+  </head>
+  <body>
+    {% include header.html pagename=page.pagename %}
+
+    {{ content }}
+
+    {% include footer.html %}
+  </body>
+</html>
