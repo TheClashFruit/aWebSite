@@ -11,23 +11,9 @@
   </div>
   <div class="navBar-menu">
     <ul>
-      {% if(include.pagename == "home") %}
-        <li><a href="#" class="active">Home</a></li>
-        <li><a href="./branding.html">Branding</a></li>
-        <li><a href="./blog.html">Blog</a></li>
-      {% endif %}
-
-      {% if(include.pagename == "branding") %}
-        <li><a href="./">Home</a></li>
-        <li><a href="#" class="active">Branding</a></li>
-        <li><a href="./blog.html">Blog</a></li>
-      {% endif %}
-
-      {% if(include.pagename == "blog") %}
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./branding.html">Branding</a></li>
-        <li><a href="#" class="active">Blog</a></li>
-      {% endif %}
+        <li><a {% if(include.pagename == "home") %} href="#"  class="active" {% else %} href="/" {% endif %}>Home</a></li>
+        <li><a {% if(include.pagename == "branding") %} href="#"  class="active" {% else %} href="/branding" {% endif %}>Branding</a></li>
+        <li><a {% if(include.pagename == "blog") %} href="#"  class="active" {% else %} href="/blog" {% endif %}>Blog</a></li>
     </ul>
   </div>
 </div>

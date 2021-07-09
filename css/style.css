@@ -88,6 +88,21 @@ body {
   text-align: center;
 }
 
+.postHeader {
+  text-align: center;
+}
+
+.postContent {
+  margin-top: 16px;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.postContent > p, .highlight {
+  margin-bottom: 6px;
+}
+
 @media (max-width: 720px) {
   .navBar {
     width: 100vw;
