@@ -1,1 +1,136 @@
-/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 8px;
+
+  width: 75vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navBar-brand {
+  font-size: 20px;
+}
+
+.navBar-menu {
+  transition: height .5s;
+}
+
+.navBar-menu > ul {
+  display: flex;
+}
+
+.navBar-menu > ul > li {
+  list-style: none;
+}
+
+.navBar-menu > ul > li > a {
+  text-decoration: none;
+  padding: 8px;
+  display: block;
+  color: #000000;
+  transition: 0.2s;
+}
+
+.navBar-menu > ul > li > a:hover {
+  color: #00aa58;
+}
+
+.navBar-menu > ul > li > a.active {
+  color: #00aa58;
+}
+
+.navBar-toggle {
+  position: relative;
+  display: none;
+  text-decoration: none;
+  color: #000000;
+  transition: 0.2s;
+}
+
+.navBar-toggle:hover {
+  color: #00aa58;
+}
+
+.navBar-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mainContent {
+  width: 70vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mainFooter {
+  width: 70vw;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding: 8px;
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  .navBar {
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navBar-main {
+    width: 100%;
+  }
+
+  .navBar-menu {
+    display: none;
+    width: 100%;
+  }
+
+  .navBar-menu > ul {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navBar-toggle {
+    display: flex;
+  }
+}
+
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #0f0f0f;
+    color: #ffffff;
+  }
+
+  .navBar-toggle {
+    color: #ffffff;
+  }
+
+  .navBar-main {
+    color: #ffffff;
+  }
+
+  .navBar-menu > ul > li > a {
+    color: #ffffff;
+  }
+}

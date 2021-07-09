@@ -10,12 +10,21 @@
     <meta name="keywords"    content="blok, blokk, open, block, sketchware">
     <meta name="theme-color" content="#007b3f">
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons+Round">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="icon" href="./img/favicon.png">
+
+    <script defer src="./js/main.js"></script>
+
     <title>Skatchwar Kopi &bull; {{ page.title }}</title>
   </head>
   <body>
     {% include header.html pagename=page.pagename %}
 
-    {{ content }}
+    <div class="mainContent">
+      {{ content }}
+    </div>
 
     {% include footer.html %}
   </body>

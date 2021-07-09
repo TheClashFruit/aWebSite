@@ -1,7 +1,33 @@
-<nav>
-  {% if(include.pagename == "home") %}
-    a
-  {% else %}
-    b
-  {% endif %}
-</nav>
+<div class="navBar">
+  <div class="navBar-main">
+    <span class="navBar-brand">
+      Skatchwar Kopi
+    </span>
+    <a href="javascript:void(0);" class="navBar-toggle" onclick="toggleNav()">
+      <span class="material-icons-round" id="toggle-icon">
+        menu
+      </span>
+    </a>
+  </div>
+  <div class="navBar-menu">
+    <ul>
+      {% if(include.pagename == "home") %}
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="./branding.html">Branding</a></li>
+        <li><a href="./blog.html">Blog</a></li>
+      {% endif %}
+
+      {% if(include.pagename == "branding") %}
+        <li><a href="./">Home</a></li>
+        <li><a href="#" class="active">Branding</a></li>
+        <li><a href="./blog.html">Blog</a></li>
+      {% endif %}
+
+      {% if(include.pagename == "blog") %}
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./branding.html">Branding</a></li>
+        <li><a href="#" class="active">Blog</a></li>
+      {% endif %}
+    </ul>
+  </div>
+</div>
